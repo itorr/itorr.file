@@ -126,8 +126,9 @@ var F=function(W,D){
 			type:0
 		});
 	},mkdir=function(name){
-		if(!name)
+		if(!name||typeof name!='string')
 			name=prompt('请输入新建文件夹名称：','新建文件夹');
+
 		x('mkdir='+en(ck(name)),function(r){
 			if(r.error)
 				return alert(r.error);
@@ -214,7 +215,8 @@ var F=function(W,D){
 			text:'新建',
 			child:[{
 				text:'文件夹',
-				key:'^+⇧+n/⌘+⇧+n'
+				key:'^+⇧+n/⌘+⇧+n',
+				func:mkdir
 			},{
 				type:'hr'
 			},{
@@ -306,7 +308,9 @@ var F=function(W,D){
 		jwerty.key('del',delFile);
 		jwerty.key('F2',rename);
 		jwerty.key('⇧+↩',showUrl);
-		jwerty.key('^+⇧+n/⌘+⇧+n',mkdir);
+		jwerty.key('^+⇧+n/⌘+⇧+n',function(){
+			mkdir();
+		});
 		jwerty.key('⌃+a/⌘+a',pitchAll);
 		jwerty.key('⌃+d/⌘+d',pitchCancel);
 	});
