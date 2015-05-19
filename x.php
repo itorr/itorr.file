@@ -135,8 +135,8 @@ if(isset($_GET['path'])){
 	$thumb=ck('_thumb/'.$thumb.'.jpg',0);
 	$thumb=str_replace($ROOT,'',$thumb);
 
-	// if(!file_exists('_thumb'))
-	// 	mkdir('_thumb',0777,1);
+	if(!file_exists('_thumb'))
+	 	mkdir('_thumb',0777,1);
 
 	$resizeimage = new resizeimage($dir,'200','200',"0",$thumb);
 	exit($thumb);
