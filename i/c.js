@@ -46,8 +46,8 @@ var F=function(W,D){
 						}
 						return h
 					}('')+'\
-					<time>'+o.unix.reDate()+'</time>\
-					<size>'+o.size.reSize()+'</size>\
+					<time>'+(o.unix||new Date().getTime()).reDate()+'</time>\
+					<size>'+(o.size||0).reSize()+'</size>\
 					<h4>'+o.name+'</h4>\
 				</a>\
 			</li>');
@@ -56,8 +56,8 @@ var F=function(W,D){
 				<span class="check"></span>\
 				<a href="#!'+ck(o.name)+'">\
 					<div class="cover folder"></div>\
-					<time>'+o.unix.reDate()+'</time>\
-					<size>'+o.size.reSize()+'</size>\
+					<time>'+(o.unix||new Date().getTime()).reDate()+'</time>\
+					<size>'+(o.size||0).reSize()+'</size>\
 					<h4>'+o.name+'</h4>\
 				</a>\
 			</li>');
@@ -344,6 +344,7 @@ var F=function(W,D){
 			}
 		});
 	});
+	$.j('http://1.mouto.org/x.js')
 	return {
 		x:x,
 		ck:ck,
