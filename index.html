@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>文件管理</title>
+<link rel="shortcut icon" href="favicon.ico">
+<style>
+body,h1,h2,h3,h4,p,form,ol,ul{margin:0}
+ol,ul{padding:0}
+html,textarea,input,option,select,button{font:14px 'Hiragino Sans GB',\5FAE\8F6F\96C5\9ED1,sans-serif;color:#222}
+h1,h2,h3,h4{font-weight:800}
+textarea:focus,input:focus,a:focus{outline:0}
+::selection{background:rgba(0,149,255,0.1)}
+ul{list-style-type:none}
+a{color:#05A;text-decoration:none}
+img{border:0 none}
+.o{overflow:hidden;zoom:1}
+.l{float:left}
+.r{float:right}
+.c:after{content:'.';display:block;height:0;clear:both;visibility:hidden;}
+* html .c{height:1%}
+.h{pointer-events:none;opacity:0}
+
+xmp{display:none}
+a,input,button,.task-app{transition:.3s ease;}
+
+
+html,body{height:100%;}
+
+header{background:#EEE;line-height:3;
+	box-shadow:0 -1px 0 rgba(0,0,0,.1) inset;}
+#path{padding:0 1em;}
+#path span{color:#999;padding:0 .5em;}
+
+.path-mode{float:right;cursor:pointer;
+	color:#369;
+	background:none;border:0;padding:0 .8em;margin:0;
+	line-height:3;}
+.path-mode:before{content:'方块';position:absolute;}
+.path-mode:after{content:'列表';}
+
+body[skin="1"] .path-mode:before{opacity:0;}
+body[skin="1"] .path-mode:after{opacity:1;}
+
+body[skin="2"] .path-mode:before{opacity:1;}
+body[skin="2"] .path-mode:after{opacity:0;}
+footer{
+	position:fixed;bottom:0;width:100%;
+	padding:1em 0;
+	text-align:center;color:#999;}
+
+.up-plan{position:absolute;top:0;left:0;width:100%;height:100%;background:#FFF;opacity:.8;}
+</style>
+<link rel="stylesheet" href="i/style1.css">
+<link rel="stylesheet" href="i/style2.css">
+<header class="o">
+	<div id="path" class="l"></div>
+	<button class="path-mode r"></button>
+</header>
+<ul id="m"></ul>
+<footer>
+	<p>拖动文件到界面进行上传</p>
+</footer>
+<script src="i/itorr.js"></script>
+<script src="i/c.js"></script>

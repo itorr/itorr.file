@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<style>
+html,body,video{margin:0;height:100%;width:100%;overflow:hidden;background:#000;}
+</style>
+　
+<script>
+var dir=location.hash.substr(1);
+if(dir.match(/mp4|aac|m4a|mp3|flv$/))
+document.body.innerHTML='<video controls autoplay name="media">\
+	<source src="'+dir+'">\
+</video>';
+</script>

@@ -1,0 +1,52 @@
+body[skin="2"] #m{padding:10px 0;}
+body[skin="2"] #m li{display:block;
+	position:relative;line-height:36px;
+	overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+body[skin="2"] #m li:nth-child(2n){background:#F8F8F8;}
+body[skin="2"] #m li a{display:block;margin-left:33px;padding-right:1em;}
+
+body[skin="2"] #m li .check{float:left;position:relative;
+	height:16px;width:16px;margin:8px 0 8px 8px;border:2px solid rgba(0,0,0,0);
+	font-weight:bold;}
+body[skin="2"] #m li:hover .check{border-color:rgba(150,150,150,.3);background:rgba(150,150,150,.1);}
+
+body[skin="2"] #m li[check="yes"],
+body[skin="2"] #m li[check="yes"]:hover a{
+	/*box-shadow:0 0 0 3px #4bf inset;*/
+	background:#d7e8ff;
+}
+body[skin="2"] #m li[check="yes"] .check{
+	border-color:#4bf;
+	background:rgba(5,146,255,.15);
+	pointer-events:auto;}
+body[skin="2"] #m li[check="yes"] .check:before{content:'';
+	width:22px;height:22px;
+	background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><polygon fill="#4bf" points="0,8 5.8,11.9 20,0.8 6.7,18.7"/></svg>') no-repeat;background-size:cover;
+	position:absolute;left:0;bottom:0;}
+
+
+
+body[skin="2"] #m li img{max-width:30px;max-height:30px;
+	display:inline-block;vertical-align:middle;}
+
+body[skin="2"] .cover{float:left;width:30px;height:30px;line-height:30px;
+	margin:3px;
+	background:#DDD;color:#666;
+	text-align:center;font-size:.7em;}
+body[skin="2"] .cover.img{background:none;}
+body[skin="2"] .folder{background:#FFD500;}
+body[skin="2"] .empty{background:#EEE;}
+body[skin="2"] #m h4{font-weight:normal;inline-block;
+	margin:0 220px 0 40px;
+	overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+body[skin="2"] #m size,
+body[skin="2"] #m time{float:right;font-size:.85em;opacity:.5;
+	text-align:right;}
+
+body[skin="2"] #m time{width:18%;padding-right:.5em;}
+
+@media(max-width:700px){
+	body[skin="2"] #m size{display:none;}
+	body[skin="2"] #m h4{margin-right:100px;}
+}
