@@ -310,6 +310,7 @@ var F=function(W,D){
 		jwerty.key('⇧+↩',showUrl);
 		jwerty.key('^+⇧+n/⌘+⇧+n',function(){
 			mkdir();
+			return false;
 		});
 		jwerty.key('⌃+a/⌘+a',pitchAll);
 		jwerty.key('⌃+d/⌘+d',pitchCancel);
